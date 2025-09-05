@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Tourism - Lumbini Park</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Lumbini_Park,_Hyderabad (1).jpg" alt="Lumbini Park" class="hero-img">
+        <div class="overlay">
+            <h1>Lumbini Park, Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>Lakeside park near Hussain Sagar, famous for laser shows, musical fountains, and boating to the Buddha statue.</p>
+        <ul>
+            <li><strong>Location:</strong> Tank Bund Road, Hyderabad</li>
+            <li><strong>Timings:</strong> 9:00 AM - 9:00 PM</li>
+            <li><strong>Entry Fee:</strong> ₹20 (Adults), ₹10 (Children), Laser Show ₹50</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+                <div class="place-card">
+                    <img src="./images/Hussain_Sagar_1.jpg" alt="Hussain Sagar Lake">
+                    <h3>Hussain Sagar Lake (0.5 km)</h3>
+                    <p>Iconic lake with the Buddha statue and boating activities.</p>
+                    <p><strong>Timings:</strong> 8:00 AM - 10:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free (boating ₹55-₹110)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Buddha_Statue_of_Hyderabad_at_night.jpg" alt="Buddha Statue">
+                    <h3>Buddha Statue (via boat)</h3>
+                    <p>18m granite Buddha statue on Gibraltar Rock, accessible by boat.</p>
+                    <p><strong>Timings:</strong> 10:00 AM - 8:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Boating ₹55-₹110</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/NTR_Garden.jpg" alt="NTR Gardens">
+                    <h3>NTR Gardens (1 km)</h3>
+                    <p>Urban park with toy train, gardens, and fountains.</p>
+                    <p><strong>Timings:</strong> 2:30 PM - 8:30 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹20 (Adults), ₹10 (Children)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/People_Morning_walk_Necklace_road.jpeg" alt="Necklace Road">
+                    <h3>Necklace Road (1.5 km)</h3>
+                    <p>Scenic lakeside boulevard with eateries and gardens.</p>
+                    <p><strong>Timings:</strong> Open all day</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Birla_Mandir_1.jpeg" alt="Birla Mandir">
+                    <h3>Birla Mandir (3 km)</h3>
+                    <p>White marble temple with panoramic views of Hyderabad.</p>
+                    <p><strong>Timings:</strong> 7:00 AM - 12:00 PM, 3:00 PM - 9:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+            </div>
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <p><strong>Deepa:</strong> “The laser show is fantastic!” ⭐⭐⭐⭐⭐</p>
+        <p><strong>Vikram:</strong> “Good for families, boating is enjoyable.” ⭐⭐⭐⭐</p>
+    </section>
+
+     <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+
+</body>
+</html>

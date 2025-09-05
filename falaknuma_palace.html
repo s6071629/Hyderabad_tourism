@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyderabad Tourism - Falaknuma Palace</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Falaknuma_Palace.jpg" alt="Falaknuma Palace" class="hero-img">
+        <div class="overlay">
+            <h1>Falaknuma Palace, Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>A grand 19th-century palace built by the Nizam, known as the “Mirror of the Sky.” Now a luxury Taj hotel, famous for its Venetian chandeliers, massive dining hall, and stunning hilltop views.</p>
+        <ul>
+            <li><strong>Location:</strong> Engine Bowli, Falaknuma, Hyderabad</li>
+            <li><strong>Timings:</strong> Guided tours (by prior booking) usually 4:00 PM - 5:30 PM (Closed Monday)</li>
+            <li><strong>Entry Fee:</strong> Around ₹3000-₹4000 per person (tour + hi-tea package, via Taj)</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+
+            <div class="place-card">
+                <img src="./images/Charminar-Pride_of_Hyderabad.jpg" alt="Charminar">
+                <h3>Charminar (5 km)</h3>
+                <p>Iconic 16th-century monument and bustling markets of old Hyderabad.</p>
+                <p><strong>Timings:</strong> 9:30 AM - 5:30 PM</p>
+                <p><strong>Entry Fee:</strong> Indians ₹25, Foreigners ₹300</p>
+            </div>
+
+            <div class="place-card">
+                <img src="./images/Mecca_Masjid_Hyderabad.jpeg" alt="Mecca Masjid">
+                <h3>Mecca Masjid (5 km)</h3>
+                <p>Historic mosque built in 1614, one of the largest in India.</p>
+                <p><strong>Timings:</strong> 4:00 AM - 9:30 PM</p>
+                <p><strong>Entry Fee:</strong> Free</p>
+            </div>
+
+            <div class="place-card">
+                <img src="./images/Chowmahalla_Palace.jpg" alt="Chowmahalla Palace">
+                <h3>Chowmahalla Palace (6 km)</h3>
+                <p>Nizam's official residence, with grand halls and courtyards.</p>
+                <p><strong>Timings:</strong> 10:00 AM - 5:00 PM (Closed Friday)</p>
+                <p><strong>Entry Fee:</strong> Indians ₹100, Foreigners ₹400</p>
+            </div>
+
+            <div class="place-card">
+                <img src="./images/Salar_Jung_Museum_1.jpg" alt="Salar Jung Museum">
+                <h3>Salar Jung Museum (7 km)</h3>
+                <p>National museum with art, antiques, and rare artifacts.</p>
+                <p><strong>Timings:</strong> 10:00 AM - 5:00 PM (Closed Friday)</p>
+                <p><strong>Entry Fee:</strong> Indians ₹50, Foreigners ₹500</p>
+            </div>
+
+            <div class="place-card">
+                <img src="./images/Laad_Bazaar.jpg" alt="Laad Bazaar">
+                <h3>Laad Bazaar (5 km)</h3>
+                <p>Famous shopping street for bangles, pearls, and traditional wear.</p>
+                <p><strong>Timings:</strong> 11:00 AM - 10:30 PM</p>
+                <p><strong>Entry Fee:</strong> Free</p>
+            </div>
+
+        </div>
+        <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="card">
+       <h2>Reviews</h2>
+        <p><strong>Neha:</strong> “The hi-tea experience here is royal, worth the price!” ⭐⭐⭐⭐⭐</p>
+        <p><strong>Rohan:</strong> “Amazing palace, but entry is expensive since it’s now a hotel.” ⭐⭐⭐⭐</p>
+    </section>
+
+     <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+
+    <script>
+        const scrollmenu = document.getElementById("scrollmenu");
+        const leftBtn = document.querySelector(".scroll-btn.left");
+        const rightBtn = document.querySelector(".scroll-btn.right");
+        const card = document.querySelector(".place-card");
+
+        leftBtn.addEventListener("click", () => {
+            const cardWidth = card.offsetWidth + 20;
+            scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+        });
+
+        rightBtn.addEventListener("click", () => {
+            const cardWidth = card.offsetWidth + 20;
+            scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+</html>

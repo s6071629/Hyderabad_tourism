@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Tourism - Sudha Cars Museum</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Sudha_Cars_Museum.jpg" alt="Sudha Cars Museum" class="hero-img">
+        <div class="overlay">
+            <h1>Sudha Cars Museum, Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>A quirky museum by K. Sudhakar showcasing handmade cars shaped like shoes, handbags, pens, cycles, and more.</p>
+        <ul>
+            <li><strong>Location:</strong> Bahadurpura, near Zoo Park, Hyderabad</li>
+            <li><strong>Timings:</strong> 9:30 AM - 6:30 PM</li>
+            <li><strong>Entry Fee:</strong> Adults ₹50-150, Kids ₹15-100, Camera ₹100</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+                
+                <div class="place-card">
+                    <img src="./images/Hyderabad_zoo.jpg" alt="Nehru Zoological Park">
+                    <h3>Nehru Zoological Park (1 km)</h3>
+                    <p>Large zoo with safari rides, toy train, aquarium, and butterfly park.</p>
+                    <p><strong>Timings:</strong> 8:30 AM - 5:00 PM (Closed Monday)</p>
+                    <p><strong>Entry Fee:</strong> ₹100 (Adults), ₹50 (Children)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Chowmahalla_Palace.jpg" alt="Chowmahalla Palace">
+                    <h3>Chowmahalla Palace (3 km)</h3>
+                    <p>18th-century palace of the Nizams with grand halls and artifacts.</p>
+                    <p><strong>Timings:</strong> 10:00 AM - 5:00 PM (Closed Friday)</p>
+                    <p><strong>Entry Fee:</strong> ₹100 (Indians), ₹40(Children below 10), ₹400 (Foreigners)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Charminar-Pride_of_Hyderabad.jpg" alt="Charminar">
+                    <h3>Charminar (4 km)</h3>
+                    <p>Iconic 16th-century monument and bustling market hub.</p>
+                    <p><strong>Timings:</strong> 9:30 AM - 5:30 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹25 (Indians), ₹300 (Foreigners)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Salar_Jung_Museum_1.jpg" alt="Salar Jung Museum">
+                    <h3>Salar Jung Museum (5 km)</h3>
+                    <p>National museum with world-famous art and antique collections.</p>
+                    <p><strong>Timings:</strong> 10:00 AM - 5:00 PM (Closed Monday)</p>
+                    <p><strong>Entry Fee:</strong> ₹50 (Indians), ₹500 (Foreigners)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Mecca_Masjid_Hyderabad.jpeg" alt="Mecca Masjid">
+                    <h3>Mecca Masjid (3 km)</h3>
+                    <p>One of India's largest and oldest mosques, near Charminar.</p>
+                    <p><strong>Timings:</strong> 4:00 AM - 9:30 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/NTR_Garden.jpg" alt="NTR Gardens">
+                    <h3>NTR Gardens (8 km)</h3>
+                    <p>Lush park with toy train, rides, Japanese garden, and fountains.</p>
+                    <p><strong>Timings:</strong> 2:30 PM - 8:30 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹20 (Adults), ₹10 (Children)</p>
+                </div>
+
+            </div>
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section> 
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <p><strong>Seshank:</strong> Best car museum ever, very creative! ⭐⭐⭐⭐</p>
+            <p><strong>Mithran:</strong> Amazing ideas, but needs better maintenance. ⭐⭐⭐⭐</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+    
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20; 
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20; 
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+</body>
+</html>

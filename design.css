@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 20px;
+    color: white;
+}
+
+/* Review Card */
+.card {
+  background: #ffffff;
+  margin: 40px auto;
+  padding: 30px 45px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card li{
+  list-style-position: inside;
+}
+
+.card label {
+  display: block;
+  margin: 15px auto 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  text-align: left;
+  width: 90%;
+}
+
+.nearby {
+  margin: 40px auto;
+  padding: 10px;
+  width: 90%;
+  max-width: 900px;
+}
+
+.nearby h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Scroll container */
+.scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scrollmenu {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 15px 10px;
+  flex: 1;
+}
+
+.scrollmenu::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+
+/* Place card */
+.place-card {
+  flex: 0 0 280px;
+  background: #f5f8ff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.place-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #A9D8FF;
+  margin-bottom: 15px;
+}
+
+.place-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.place-card p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #555;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  background: #4a90e2;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background: #3c7ac6;
+}
+
+.scroll-btn.left {
+  left: -20px;
+}
+
+.scroll-btn.right {
+  right: -20px;
+}
+
+
+.card select {
+  display: block;
+  width: 90%;
+  margin: 8px auto 20px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.card textarea {
+  width: 90%;
+  display: block;
+  margin: 8px auto 20px;
+  padding: 5px 14px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.card button[type="submit"] {
+  display: block;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card button[type="submit"]:hover {
+  background: linear-gradient(135deg, #0056b3, #0096c7);
+  transform: scale(1.05);
+}
+
+/* Existing CSS... */
+
+/* Responsive adjustments */
+/* For medium-sized screens (laptops, tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .place-card {
+    flex: 0 0 300px; /* Adjust card width for better fit on tablets */
+  }
+
+  .scroll-btn.left {
+    left: 0;
+  }
+  .scroll-btn.right {
+    right: 0;
+  }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 768px) {
+  .place-card {
+    flex: 0 0 80%; /* wider cards for mobile */
+  }
+
+  .place-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .place-card h3 {
+    font-size: 16px;
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+  }
+  .scroll-btn.right {
+    right: 0;
+  }
+}
+
+/* New: Specific styles for very small screens (<= 400px) */
+@media (max-width: 400px) {
+  .scroll-wrapper {
+    padding: 0 20px; /* Add horizontal padding to the wrapper */
+  }
+  .scroll-btn.left {
+    left: -10px; /* Adjust the button position slightly to the left */
+  }
+  .scroll-btn.right {
+    right: -10px; /* Adjust the button position slightly to the right */
+  }
+  .place-card {
+    padding: 15px; 
+  }
+}
+
+/* For small screens (phones up to 768px wide) */
+@media (max-width: 768px) {
+  .scrollmenu {
+    gap: 12px; /* smaller gaps */
+    padding: 10px; /* tighter padding */
+  }
+
+  .place-card {
+    flex: 0 0 85%;   /* card takes most of screen width */
+    max-width: 90%;
+    margin: 0 auto;  /* center cards */
+  }
+
+  .place-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .place-card h3 {
+    font-size: 15px;
+  }
+
+  .scroll-btn {
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+  .scroll-btn.left {
+    left: 5px;
+  }
+  .scroll-btn.right {
+    right: 5px;
+  }
+}
+
+/* For extra-small screens (phones <= 480px) */
+@media (max-width: 480px) {
+  .place-card {
+    flex: 0 0 95%; /* almost full width */
+    max-width: 95%;
+  }
+
+  .scroll-btn {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+  .scroll-btn.left {
+    left: 2px;
+  }
+  .scroll-btn.right {
+    right: 2px;
+  }
+}

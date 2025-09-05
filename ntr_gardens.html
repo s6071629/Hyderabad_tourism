@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Tourism - NTR Gardens</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/NTR_Garden.jpg" alt="NTR Gardens" class="hero-img">
+        <div class="overlay">
+            <h1>NTR Gardens, Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>A vibrant urban park near Hussain Sagar Lake featuring landscaped gardens, fountains, a Japanese garden, toy train, and fun rides. Great for evening relaxation and family outings.</p>
+        <ul>
+            <li><strong>Location:</strong> Hussain Sagar Lake, Hyderabad</li>
+            <li><strong>Timings:</strong> 2:30 PM - 8:30 PM (Weekdays), 12:30 PM - 9:00 PM (Weekends)</li>
+            <li><strong>Entry Fee:</strong> Adults ₹20, Children ₹10, Camera charges extra</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+
+                <div class="place-card">
+                    <img src="./images/Hussain_Sagar_1.jpg" alt="Hussain Sagar Lake">
+                    <h3>Hussain Sagar Lake (0.5 km)</h3>
+                    <p>Heart-shaped lake with the giant Buddha statue and boating.</p>
+                    <p><strong>Timings:</strong> 8:00 AM - 10:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free (Boating ₹55-₹110 approx.)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Lumbini_Park,_Hyderabad (1).jpg" alt="Lumbini Park">
+                    <h3>Lumbini Park (1 km)</h3>
+                    <p>Lakeside park with musical fountain and laser light show.</p>
+                    <p><strong>Timings:</strong> 9:00 AM - 9:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Adults ₹20, Children ₹10</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Birla_Mandir_1.jpeg" alt="Birla Mandir">
+                    <h3>Birla Mandir (3 km)</h3>
+                    <p>White marble temple on a hilltop with city views.</p>
+                    <p><strong>Timings:</strong> 7:00 AM - 12:00 PM, 3:00 PM - 9:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Tank_bund,hyderabad,A.P_-_panoramio.jpg" alt="Tank Bund Road">
+                    <h3>Tank Bund Road (1 km)</h3>
+                    <p>Scenic road with statues, views of Hussain Sagar, and evening lights.</p>
+                    <p><strong>Timings:</strong> Open all day</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+            </div>
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section> 
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <p><strong>Rohit:</strong> “Peaceful place to relax, best visited in the evening.” ⭐⭐⭐⭐</p>
+            <p><strong>Sneha:</strong> “Great for families, kids loved the toy train!” ⭐⭐⭐⭐⭐</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+    
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Tourism - Shilparamam</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Shilparamam_1.jpg" alt="Shilparamam" class="hero-img">
+        <div class="overlay">
+            <h1>Shilparamam Arts & Crafts Village, Jubilee Hills</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>An open cultural village showcasing India's traditional crafts, rural-village life, rock sculptures, and seasonal cultural performances—all set amid lush greenery in the IT-focused area of Jubilee Hills, Hyderabad.</p>
+        <ul>
+            <li><strong>Location:</strong> Jubilee Enclave, HITEC City (Madhapur), Hyderabad</li>
+            <li><strong>Timings:</strong> 10:30 AM - 8:30 PM</li>
+            <li><strong>Entry Fee:</strong> Adults ₹60, Children ₹20; optional: Boating ₹30, Battery-cart ₹15</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+
+                <div class="place-card">
+                    <img src="./images/Kbrpark.jpg" alt="Kasu Brahmananda Reddy National Park">
+                    <h3>KBR National Park (2 km)</h3>
+                    <p>Large green urban park ideal for walking, jogging, or relaxing in nature.</p>
+                    <p><strong>Timings:</strong> 6:00 AM - 6:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Usually free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Durgam_Cheruvu_1.jpg" alt="Durgam Cheruvu">
+                    <h3>Durgam Cheruvu (3 km)</h3>
+                    <p>A scenic lake offering boating, trekking paths, restaurants, and an open-air disco.</p>
+                    <p><strong>Timings:</strong> Daily, Morning to late evening</p>
+                    <p><strong>Entry Fee:</strong> Boating etc. charges apply</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/LotusPond_Evening.jpeg" alt="Lotus Pond">
+                    <h3>Lotus Pond (1.5 km)</h3>
+                    <p>Serene man-made pond, popular for morning strolls and leisure.</p>
+                    <p><strong>Timings:</strong> Typically daylight hours</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/State_Gallery_of_Fine_Arts_-_Hyderabad.jpg" alt="State Gallery of Fine Arts">
+                    <h3>State Gallery of Fine Arts (2.5 km)</h3>
+                    <p>Art gallery showcasing regional and national fine arts collections.</p>
+                    <p><strong>Timings:</strong> 10:00 AM - 5:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Modest (varies)</p>
+                </div>
+
+            </div>
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section> 
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <p><strong>Neeraja:</strong> “Shilparamam shopping is best—handworkers from across India, lovely ambiance.” ⭐⭐⭐⭐</p>
+            <p><strong>Kavya:</strong> “Cultural shows, artsy stalls, and great for family outings.” ⭐⭐⭐⭐⭐</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+    
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+</body>
+</html>

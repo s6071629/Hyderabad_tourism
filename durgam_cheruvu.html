@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Tourism - Destination</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Durgam_Cheruvu_1.jpg" alt="Durgam Cheruvu" class="hero-img">
+        <div class="overlay">
+            <h1>Durgam Chervu(Secret Lake), Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>Scenic lake surrounded by rocks, with a suspension bridge, cafés, and leisure activities.</p>
+        <ul>
+            <li><strong>Location:</strong> Madhapur, Hyderabad</li>
+            <li><strong>Timings:</strong> 10:00 AM - 6:30 PM(Bridge view open till late night)</li>
+            <li><strong>Entry Fee:</strong> Free (boating and activities extra ₹50-₹200) </li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+                <div class="place-card">
+                    <img src="images/Inorbit_Mall.jpg" alt="Inorbit Mall">
+                    <h3>Inorbit Mall (0.8 km)</h3>
+                    <p>Popular shopping mall with branded stores, multiplex, and food court.</p>
+                    <p><strong>Timings:</strong> 11:00 AM - 10:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free (shopping/entertainment charges extra) </p>
+                </div>
+                <div class="place-card">
+                    <img src="./images/Shilparamam.jpg" alt="Shilparamam">
+                    <h3>Shilparamam (3 km)</h3>
+                    <p>Cultural village showcasing traditional crafts, fairs, and art.</p>
+                    <p><strong>Timings:</strong> 10:30 AM - 8:00 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹40 (Adults), ₹20 (Children)</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/Mural_sculpture_at_the_entrance_of_Hyderabad_Botanical_Garden.jpg" alt="Botanical Gardens">
+                    <h3>Botanical Gardens (6 km)</h3>
+                    <p>erene green space with diverse flora, walking trails, and birdlife.</p>
+                    <p><strong>Timings:</strong> 5:30 AM - 6:00 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹25 (Adults), ₹10 (Children)</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/Kbrpark.jpg" alt="KBR National Park">
+                    <h3>KBR National Park (7 km)</h3>
+                    <p>Popular urban park for jogging, birdwatching, and nature walks.</p>
+                    <p><strong>Timings:</strong> 5:00 AM - 9:30 AM, 4:00 PM - 6:00 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹20 (Adults), ₹10 (Children)</p>
+                </div>
+            </div>
+
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section> 
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <p><strong>Ravi:</strong> Beautiful monument, must visit! ⭐⭐⭐⭐⭐</p>
+            <p><strong>Anjali:</strong> Loved the architecture! ⭐⭐⭐⭐</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+    
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20; // 20 is the gap
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20; // 20 is the gap
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+</body>
+</html>

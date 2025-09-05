@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Tourism - Destination</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Birla_Mandir_1.jpeg" alt="Birla Mandir" class="hero-img">
+        <div class="overlay">
+            <h1>Birla Mandir, Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>A serene white marble temple dedicated to Lord Venkateswara, offering panoramic views of Hyderabad.</p>
+        <ul>
+            <li><strong>Location:</strong> Naubat Pahad, Hyderabad</li>
+            <li><strong>Timings:</strong> 7:00 AM - 12:00 PM, 3:00 PM - 9:00 PM</li>
+            <li><strong>Entry Fee:</strong> Free</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+                <div class="place-card">
+                    <img src="images/Birla_planetarium,_Hyderabad_ (1).jpg" alt="Birla Planetarium">
+                    <h3>Birla Planetarium (0.2 km)</h3>
+                    <p>Modern planetarium with space & astronomy shows.</p>
+                    <p><strong>Timings:</strong> 10:30 AM - 8:00 PM</p>
+                    <p><strong>Entry Fee:</strong>₹120 Adults, ₹80 Children </p>
+                </div>
+                <div class="place-card">
+                    <img src="images/Birla_planetarium,_Hyderabad_ (1).jpg" alt="BM Birla Science Museum">
+                    <h3>BM Birla Science Museum (part of the same complex)</h3>
+                    <p>Includes archaeology, interactive science displays, and a dinosaurium.</p>
+                    <p><strong>Timings:</strong> 10:30 AM - 8:00 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹50 - ₹150 depending on sections</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/Lumbini_Park,_Hyderabad (1).jpg" alt="Lumbini Park">
+                    <h3>Lumbini Park (2.5 km)</h3>
+                    <p>Lakeside park with musical fountains and laser light shows near Hussain Sagar.</p>
+                    <p><strong>Timings:</strong> 9:00 AM - 9:00 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹20 (Adults), ₹10 (Children)</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/Hussain_Sagar_1.jpg" alt="Hussain Sagar Lake">
+                    <h3>Hussain Sagar Lake(3 km)</h3>
+                    <p>Iconic heart-shaped lake with the giant Buddha statue in the middle. Famous for boating and evening lights.</p>
+                    <p><strong>Timings:</strong> 8:00 AM - 10:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free (boating charges extra: ₹55 - ₹110 approx.)</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/People_Morning_walk_Necklace_road.jpeg" alt="Necklace Road">
+                    <h3>Necklace Road (3 km)</h3>
+                    <p>Lakeside promenade with eateries, gardens, and great views of the lake at night.</p>
+                    <p><strong>Timings:</strong> Open all day</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+                <div class="place-card">
+                    <img src="images/NTR_Garden.jpg" alt="NTR Gardens">
+                    <h3>NTR Gardens (3 km)</h3>
+                    <p>A lush urban park with fun rides, toy train, Japanese garden, and fountains.</p>
+                    <p><strong>Timings:</strong> 2:30 PM - 8:30 PM (Weekdays), 12:30 PM - 9:00 PM (Weekends)</p>
+                    <p><strong>Entry Fee:</strong> ₹20 (Adults), ₹10 (Children)</p>
+                </div>
+            </div>
+
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section> 
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <p><strong>Ravi:</strong> Beautiful monument, must visit! ⭐⭐⭐⭐⭐</p>
+            <p><strong>Anjali:</strong> Loved the architecture! ⭐⭐⭐⭐</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+    
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20; // 20 is the gap
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20; // 20 is the gap
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+</body>
+</html>

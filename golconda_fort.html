@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyderabad Tourism - Golconda Fort</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Golconda_Fort_001.jpg" alt="Golconda Fort" class="hero-img">
+        <div class="overlay">
+            <h1>Golconda Fort, Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>Historic fortress from the 12th century, famous for acoustics, palaces, and the evening light & sound show.</p>
+        <ul>
+            <li><strong>Location:</strong> Ibrahim Bagh, Hyderabad</li>
+            <li><strong>Timings:</strong> 9:00 AM - 5:30 PM</li>
+            <li><strong>Entry Fee:</strong> Indians ₹25, Foreigners ₹100; Light Show ₹140–₹200</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+        <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+
+                <div class="place-card">
+                    <img src="./images/Qutub_Shahi_Tombs_illuminated.jpg" alt="Qutb Shahi Tombs">
+                    <h3>Qutb Shahi Tombs (2 km)</h3>
+                    <p>Royal tombs with Persian, Pathan, and Hindu architecture.</p>
+                    <p><strong>Timings:</strong> 9:30 AM - 6:30 PM</p>
+                    <p><strong>Entry Fee:</strong> ₹20 (Adults), ₹10 (Children)</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Taramati_Baradari_0001.jpg" alt="Taramati Baradari">
+                    <h3>Taramati Baradari (3 km)</h3>
+                    <p>Historic pavilion and cultural complex with open-air theatre.</p>
+                    <p><strong>Timings:</strong> 11:00 AM - 6:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Charminar-Pride_of_Hyderabad.jpg" alt="Charminar">
+                    <h3>Charminar (11 km)</h3>
+                    <p>Iconic 16th-century monument in the old city with bustling markets.</p>
+                    <p><strong>Timings:</strong> 9:30 AM - 5:30 PM</p>
+                    <p><strong>Entry Fee:</strong> Indians ₹25, Foreigners ₹300</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Mecca_Masjid_Hyderabad.jpeg" alt="Mecca Masjid">
+                    <h3>Mecca Masjid (11 km)</h3>
+                    <p>One of the largest mosques in India, built in 1614.</p>
+                    <p><strong>Timings:</strong> 4:00 AM - 9:30 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+            </div>
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <p><strong>Sahana:</strong> “The fort views are amazing, great history.” ⭐⭐⭐⭐⭐</p>
+        <p><strong>Imran:</strong> “Evening light show is worth it.” ⭐⭐⭐⭐</p>
+    </section>
+
+     <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+
+</body>
+</html>

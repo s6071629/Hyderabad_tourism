@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Tourism - Ramoji Film City</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="./images/Ramoji_Film_City.jpg" alt="Ramoji Film City" class="hero-img">
+        <div class="overlay">
+            <h1>Ramoji Film City, Hyderabad</h1>
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>About</h2>
+        <p>One of the world's largest film studio complexes, spread over 2000 acres. A blend of movie sets, theme parks, gardens, adventure zones, and live shows—ideal for both cinema lovers and family fun.</p>
+        <ul>
+            <li><strong>Location:</strong> Abdullapurmet, Hyderabad (approx. 30 km from city centre)</li>
+            <li><strong>Timings:</strong> Daily, 9:00 AM - 5:30 PM</li>
+            <li><strong>Entry Fee:</strong> 
+                <br>• General Day Tour: Adults ₹1,150, Children (3-12 yrs) ₹950 
+                <br>• Special Packages: ₹2,350+ (includes rides, shows & meals)</li>
+        </ul>
+    </section>
+
+    <section class="nearby">
+        <h2>Nearby Places</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left">&#10094;</button>
+            <div class="scrollmenu" id="scrollmenu">
+
+                <div class="place-card">
+                    <img src="./images/Sanghi_Temple,_Hyderabad.jpg" alt="Sanghi Temple">
+                    <h3>Sanghi Temple (8 km)</h3>
+                    <p>Beautiful hilltop temple dedicated to Lord Venkateswara.</p>
+                    <p><strong>Timings:</strong> 8:00 AM - 1:00 PM, 4:00 PM - 8:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Gopuram_at_Chilkur_Temple1.jpg" alt="Chilkur Balaji Temple">
+                    <h3>Chilkur Balaji Temple (25 km)</h3>
+                    <p>Famous temple known as the “Visa Balaji” temple.</p>
+                    <p><strong>Timings:</strong> 5:00 AM - 8:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="./images/Retaining_wall_and_road_on_Osman_Sagar.jpg" alt="Osman Sagar Lake">
+                    <h3>Osman Sagar Lake (27 km)</h3>
+                    <p>Scenic reservoir with gardens and picnic spots.</p>
+                    <p><strong>Timings:</strong> 9:30 AM - 5:00 PM</p>
+                    <p><strong>Entry Fee:</strong> Free</p>
+                </div>
+
+            </div>
+            <button class="scroll-btn right">&#10095;</button>
+        </div>
+    </section> 
+
+    <section class="card">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <p><strong>Kiran:</strong> “Amazing place—cinema sets, rides, and cultural shows. Worth a full day trip!” ⭐⭐⭐⭐⭐</p>
+            <p><strong>Megha:</strong> “A bit pricey, but a unique experience. Kids loved the rides and shows.” ⭐⭐⭐⭐</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Leave a Review:</h2>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="default"></option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select><br>
+        <label for="write">Write a Review:</label><br>
+        <textarea name="write" id="write" cols="30" rows="5"></textarea><br>
+        <button type="submit">Submit</button>
+    </section>
+    
+    <script>
+      const scrollmenu = document.getElementById("scrollmenu");
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+      const card = document.querySelector(".place-card");
+
+      leftBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+      rightBtn.addEventListener("click", () => {
+        const cardWidth = card.offsetWidth + 20;
+        scrollmenu.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    </script>
+</body>
+</html>
